@@ -1,0 +1,28 @@
+{
+  "name": "bromley-solutions",
+  "version": "1.0.0",
+  "description": "Physics Website",
+  "main": "server.js",
+  "author": "Richard Bromley",
+  "dependencies": {
+    "@google-cloud/logging-winston": "^3.0.4",
+    "dotenv": "^8.2.0",
+    "nodemailer": "^6.4.10",
+    "winston": "^3.2.1"
+  },
+  "devDependencies": {
+    "@types/node": "^14.0.14"
+  },
+  "scripts": {
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dickbrmly/bromley-solutions.git"
+  },
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/dickbrmly/bromley-solutions/issues"
+  },
+  "homepage": "https://github.com/dickbrmly/bromley-solutions#readme"
+}
