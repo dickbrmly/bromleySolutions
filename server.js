@@ -9,17 +9,9 @@ var https = require('https');
 
 const {spawn} = require("child_process");
 
-  var options = 
-  {
-     key: fs.readFileSync('./keys/bromley-solutions.key'),
-     ca: [fs.readFileSync('./keys/347375790repl_2.ca-bundle')],
-     cert: fs.readFileSync('./keys/347375790repl_2.crt'),
-     requestCert: false,
-     rejectUnaithorized: false
-  };
-  
-  var app = express();
-  debug("server.js")("working");
+var app = express();
+
+debug("server.js")("working");
 
 
 // let address = '174.69.163.24';
