@@ -11,7 +11,7 @@
 *******************************************************************************************************-->
 <!DOCTYPE html>
 
-<html xmlns="http://www.w3.org/1999/xhtml">
+<html>
 
 <head>
     <meta charset="utf-8" />
@@ -20,38 +20,34 @@
 
 <body>
     <link href="/client/contact/contact.css" rel="stylesheet" type="text/css">
-    <script src="/client/contact/contact.js"></script>
-    <img src="/client/contact/bromleySolutions.jpg" width='100%' alt="Bromley Solutions Graphic">
+    <img src="../../images/bromleySolutions.jpg" />
     <div>
-        <h1 style="color:blue; margin-left:42%; font-size: 2.0vw;">Entry Form</h1>
-        <form>
+        <form action="/newEmail" method='post'>
             <div>
-                <input type='hidden' name='form' value='newEmail' />
-                <label for="email" style="font-size: 2.0vw; margin-left: 0%; color:blue"><b>Email</b></label>
-                <input type="text" style="width:43%; font-size: 2.0vw" placeholder="Enter Email" name="email" required>
+                <label for="email"><b>Email</b></label>
+                <label for="fname"><b>First Name</b></label>
+                <span><label for="lname"><b>Last Name</b></label></span>
+                <input type="text" placeholder="Enter Email" name="email" required>
+                <span><input type="text" placeholder="Enter first name" name="fname"></span>
+                <span><input type="text" placeholder="Enter last name" name="lname"></span>
 
-                <br /><label for="fname" style="margin-left:10%; font-size: 2.0vw; color:blue"><b>First Name</b></label>
-                <span><label for="lname" style="margin-left:22%; font-size: 2.0vw; color:blue"><b>Last Name</b></label></span>
-                <br /><input type="text" style="width:28%; margin-right:6.0%; font-size: 2.0vw" placeholder="Enter first name" name="fname">
-                <span><input type="text" style="width:27.5%; font-size: 2.0vw" placeholder="Enter last name" name="lname"></span>
+                <br /><label for="street"><b>Street Address</b></label>
+                <span><label for="city"><b>City</b></label></span>
+                <span><label for="st"><b>State</b></label></span>
+                <br /><input type="text" placeholder="Enter Street Address" name="street">
+                <span><input type="text" placeholder="Enter city" name="city"></span>
+                <span><input type="text" placeholder="Enter state" name="st"></span>
 
-                <br /><label for="street" style="margin-left:10%; font-size: 2.0vw; color:blue"><b>Street Address</b></label>
-                <span><label for="city" style="margin-left:20%; font-size: 2.0vw; color:blue"><b>City</b></label></span>
-                <span><label for="st" style="margin-left:20%; font-size: 2.0vw; color:blue"><b>State</b></label></span>
-                <span><label for="zip" style="margin-left:13%; font-size: 2.0vw; color:blue"><b>Zip</b></label></span>
-                <br /><input type="text" style="width:36%; font-size: 2.0vw" placeholder="Enter Street Address" name="street">
-                <span><input type="text" style="width:22%; font-size: 2.0vw" placeholder="Enter city" name="city"></span>
-                <span><input type="text" style="width:22%; font-size: 2.0vw" placeholder="Enter state" name="st"></span>
-                <span><input type="text" style="width:14%; font-size: 2.0vw" placeholder="Enter zipcode" name="zip"></span>
+                <span><label for="zip"><b>Zip</b></label></span>
 
-                <span><label style="margin-left:0%; font-size: 2.0vw; color:blue"><b>Interests</b></label></span>
+                <br><input type="text" placeholder="Enter zipcode" name="zip"><br>
 
-                <textarea rows="5" cols="106" name="text" placeholder="Enter text"></textarea>
-                <br /><button type="submit" style="width:97%; font-size: 2.2vw">Submit</button>
+                <center><span><label><b>Interests</b></label></span>
+                    <textarea rows="5" cols="89" name="text" placeholder="Enter text"></textarea>
+                    <br /><br /><button type="submit" style="width:97%; font-size: 2.2vw">Submit</button>
+                </center>
             </div>
         </form>
-        <button id='cancelCreate' onclick='window.close()' class='container ' style="width:100%; background-color:gray; color:yellow; font-size: 2.0vw; text-align:center">Cancel User Creation</button>
-
     </div>
 </body>
 

@@ -13,7 +13,7 @@
 
 function newContact() {
     window.open('/contact/contact.html', "custom", "toolbar=no, location=no, directories=no, status=no, menubar=no, scrollbars=no, resizable=no," +
-        " copyhistory=no, top=0, left=20vw, width=800, height=395");
+        " copyhistory=no, top=0, left=20vw, width=800, height=500");
 }
 
 function opening(state) {
