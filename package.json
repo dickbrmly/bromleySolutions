@@ -1,7 +1,7 @@
 {
   "name": "bromley-solutions",
   "version": "1.0.0",
-  "description": "Physics Website",
+  "description": "Business Website",
   "main": "server.js",
   "author": "Richard Bromley",
   "dependencies": {
