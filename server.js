@@ -1,24 +1,35 @@
 "use strict";
 
-var debug = require("debug");
-debug("server.js")("working");
-
+// server.js
 const bodyParser = require('body-parser')
 const hostname = 'dick-bromley.com'
 const express = require('express')
 const https = require('https')
 const path = require('path')
 
-var app = express();
-app.use(express.urlencoded({ extended: false }));
+const fs = require('fs')
+const app = express()
+var http = express();
+const port = 443;
 
+let options = {
+    cert: fs.readFileSync(__dirname + '/Certs/dick-bromley_com.crt'), // fs.readFileSync('./ssl/example.crt');
+    ca: fs.readFileSync(__dirname + '/Certs/dick-bromley_com.ca-bundle'),
+    key: fs.readFileSync(__dirname + '/Certs/server.key')
+};
 
-var mysql = require("mysql");
-var fs = require('fs');
-var http = require('http');
+http.get('*', function(req, res)
+{
+    res.redirect('https://www.dick-bromley.com');
+})
+http.listen(80);
 
-let address = '127.0.0.1';
-var httpServer = http.createServer(app);
+https.createServer(options, app).listen(port, () =>
+{
+    console.log(`Success! Your application is running on port ${port}.`);
+})
+
+let address = '174.69.163.24';
 
 app.get('/', function(req, res)
 {
@@ -54,9 +65,4 @@ app.get('/*.jpg', function(req, res)
 {
     console.log(req.url);
     res.sendFile(__dirname + req.url);
-});
-
-app.listen(8080, address, function()
-{
-    return console.log('Server Running');
 });
