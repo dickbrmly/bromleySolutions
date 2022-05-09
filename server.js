@@ -26,15 +26,24 @@ http.listen(80);
 
 https.createServer(options, app).listen(port, () =>
 {
+
     console.log(`Success! Your application is running on port ${port}.`);
 })
 
 let address = '174.69.163.24';
 
+app.get('*', function(req, res)
+{
+    console.log(req.headers.host);
+    if (req.headers.host == 'interactive-physics.com') res.redirect('https://174.69.163.24:444');
+    else res.sendFile(__dirname + '/client/index.html');
+});
+
 app.get('/', function(req, res)
 {
     res.sendFile(__dirname + '/client/index.html');
 });
+
 app.post('/newEmail', function(req, res)
 {
     console.log('got here');
