@@ -4,25 +4,20 @@
 const bodyParser = require('body-parser')
 const hostname = 'dick-bromley.com'
 const express = require('express')
+
 const https = require('https')
 const path = require('path')
 
 const fs = require('fs')
 const app = express()
-var http = express();
-const port = 443;
+const port = 3000;
 
 let options = {
-    cert: fs.readFileSync(__dirname + '/Certs/dick-bromley_com.crt'), // fs.readFileSync('./ssl/example.crt');
-    ca: fs.readFileSync(__dirname + '/Certs/dick-bromley_com.ca-bundle'),
-    key: fs.readFileSync(__dirname + '/Certs/server.key')
+    cert: fs.readFileSync(__dirname + '/Certs/174_69_163_24.crt'), // fs.readFileSync('./ssl/example.crt');
+    ca: fs.readFileSync(__dirname + '/Certs/174_69_163_24.ca-bundle'),
+    key: fs.readFileSync(__dirname + '/Certs/174.69.163.24.key')
 };
 
-http.get('*', function(req, res)
-{
-    res.redirect('https://www.dick-bromley.com');
-})
-http.listen(80);
 
 https.createServer(options, app).listen(port, () =>
 {
@@ -30,18 +25,10 @@ https.createServer(options, app).listen(port, () =>
     console.log(`Success! Your application is running on port ${port}.`);
 })
 
-let address = '174.69.163.24';
-
-app.get('*', function(req, res)
-{
-    console.log(req.headers.host);
-    if (req.headers.host == 'interactive-physics.com') res.redirect('https://174.69.163.24:444');
-    else res.sendFile(__dirname + '/client/index.html');
-});
-
 app.get('/', function(req, res)
 {
     res.sendFile(__dirname + '/client/index.html');
+    console.log('done');
 });
 
 app.post('/newEmail', function(req, res)

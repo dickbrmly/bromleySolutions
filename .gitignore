@@ -2,3 +2,4 @@ server/node_modules/*.*
 .vscode/*.*
 secret.js
 node_modules
+Certs/*.*
