@@ -10,7 +10,7 @@ const path = require('path')
 
 const fs = require('fs')
 const app = express()
-const port = 3000;
+const port = 8080;
 
 let options = {
     cert: fs.readFileSync(__dirname + '/Certs/174_69_163_24.crt'), // fs.readFileSync('./ssl/example.crt');
