@@ -2,7 +2,7 @@
 
 // server.js
 //const bodyParser = require('body-parser')
-const hostname = 'dick-bromley.com'
+const host = '174.69.163.24'
 const express = require('express')
 
 const https = require('https')
