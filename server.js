@@ -1,7 +1,7 @@
 "use strict";
 
 // server.js
-const bodyParser = require('body-parser')
+//const bodyParser = require('body-parser')
 const hostname = 'dick-bromley.com'
 const express = require('express')
 
