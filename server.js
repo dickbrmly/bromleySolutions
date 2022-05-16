@@ -10,14 +10,13 @@ const path = require('path')
 
 const fs = require('fs')
 const app = express()
-const port = 8080;
+const port = 3000;
 
 let options = {
     cert: fs.readFileSync(__dirname + '/Certs/174_69_163_24.crt'), // fs.readFileSync('./ssl/example.crt');
     ca: fs.readFileSync(__dirname + '/Certs/174_69_163_24.ca-bundle'),
     key: fs.readFileSync(__dirname + '/Certs/174.69.163.24.key')
 };
-
 
 https.createServer(options, app).listen(port, () =>
 {
