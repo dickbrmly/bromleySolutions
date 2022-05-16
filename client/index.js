@@ -47,7 +47,7 @@ function opening(state)
                 " to create your own website. Do consider that Good programs don't take that much more time. </p><p class='opening'>" +
                 " <div class='grid - item '> <p> We have developed Websites written in HTML, CSS, Javascript with servers written in" +
                 " NodeJS. We create desktop applications in Electron (NodeJS Framework), C++ and C# through Visual Studio and" +
-                " QTCreator. </p> <p> We are currently hosting: </p> <p>" +
+                " QTCreator. </p> <p> We are currently hosting (click to enter): </p> <p>" +
                 " <img src = '/assets/BromleySolutions.png' onClick='bromley()' alt = 'Bromley Solutions Las Vegas, Nevada' width = '120' height = '120'>" +
                 " <img src = '/assets/physics.png' onClick='physics()' alt = 'Interactive Physics Las Vegas,Nevada' width = '140' height = '120'>" +
                 " <img src = 'assets/logo.png' onClick='fishbowl()' alt='Fishbowl Tinting Wichita Kansas' width = '120' height = '120'> </p>" +
