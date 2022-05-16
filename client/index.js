@@ -11,30 +11,58 @@
  *******************************************************************************************************/
 'use strict';
 
-function newContact() {
+function newContact()
+{
     window.open('/contact/contact.html', "custom", "toolbar=no, location=no, directories=no, status=no, menubar=no, scrollbars=no, resizable=no," +
         " copyhistory=no, top=0, left=20vw, width=800, height=500");
 }
 
-function opening(state) {
-    switch (state) {
+function opening(state)
+{
+    switch (state)
+    {
         case 0:
-            document.getElementById("first").innerHTML = "<p class='opening'>We're in <b>Las Vegas</b> and we're ready to meet your computational needs." +
-                " The owner is a UNLV Computer Science graduate that has been in engineering working with industrial controls and applications for years." +
-                " Bromley Solutions has it's own on site servers operating in Windows and Linux Mint.</p><p class='opening'> The servers offer website, database access, virtual Networks," +
-                " virtual routers, and off site backup.  What are volnerablities?  Anything " +
-                " accessable can be hacked, if you allow access over a Wide Area Network.  Cracking passwords is only" +
-                " a matter of attempts against the complexity of a login. A person attempting to crack an encryption password can become an impossibility. One can't live long enough " +
-                " to attempt even a small percentage of massive possiblities. But a country, using millions of computers, each computer having well defined blocks to attempt a breakin, " +
-                " becomes much simpler. More is better in code cracking. Is there a way to defend against even a powerful organization attempting to crack an encyption? Yes...  " +
-                " The first thing to do is have limits on what can be accessed.  If nothing damaging can be accessed you cannot get hurt unless you using a canned server or service. " +
-                " This is one of the reasons why I write my own server routines---nothing off the shelf. I have the server handle sensitive issues, with limits on access, and everything " +
-                " is encrypted.  IP addresses are monitored for hackers. I like to code, and I like to limit the code to routines that actually get used so I try to limit software library " +
-                " useage. There are backdoors in world. Wordpress requires a backdoor. Why have the access point? Angular requires 120,000 bytes before one can even offer a 'hello world,' " +
-                " and there isn't enough time savings on site construction. Express and it's middlewear concept leaves you looking for the punch line. If output is the goal (two websites" +
-                " a day garbage), then heavy chop shop tactics would be needed. You need WordPress if you want to hire high school kids, and BootStrap, if you want your sites to look like the" +
-                " templets these packages offer. Good programs don't take that much more time. Double sounds massive, but that amounts to a couple days in most cases and there is a huge savings" +
-                " in size and efficiency.</p>"
+            document.getElementById("first").innerHTML = "<p class='opening'>Bromley Solutions resides in <b>Las Vegas</b> " +
+                " though we can accept clients from all over the world. This can be done because servicing can happen though" +
+                " SSH and Remote Desktop connections. We're ready to meet your computational needs. The owner (Richard Bromley" +
+                " ) is a UNLV Computer Science graduate that has been in engineering working with industrial controls and" +
+                " applications for years. Bromley Solutions has it's own on site servers operating in Linux Mint (Cinnmon)." +
+                " The servers offer website, database access, online applications and off site backup." +
+                " </p><p class='opening'> What are volnerablities?  Anything accessable can be hacked, if you allow access over" +
+                " a Wide Area Network.  Cracking passwords is only a matter of attempts against the complexity of the login. A" +
+                " person attempting to crack a password can become a near impossibility. One can't live long enough to attempt even" +
+                " a small percentage of the massive possiblities. But a country using millions of computers, each computer having" +
+                " well defined blocks of possibilites, has good chance at a breakin. More is better in code cracking." +
+                " </p><p class='opening'> Is there a way to defend against even a powerful organization attempting to crack an" +
+                " encyption? Yes... The first thing to do is limit what can be <b>accessed</b>. If nothing damaging can be accessed" +
+                " you cannot get hurt unless you're using a canned server or service needing updates. This is one of the reasons why" +
+                " we write my own server for each site we develop. Very little off the shelf. </p><p class='opening'> The server limits" +
+                " what can be accessed for each user. The sites are encrypted and certified. This allows visitors to see a lock symbol" +
+                " presented by their browser indicating the site is certified. The server doesn't allow client side fishing, or looking" +
+                " for files in inappropriate directories. HTML and CSS files can only be accessed in proper places because the server" +
+                " doesn't care what directory is being requested. Good coding is just enough to get the job done.  Waste is illogical." +
+                " </p><p class='opening'> Consider that Wordpress actually requires a backdoor. Updates occur regularly.  Updates that" +
+                " effect operations. Angular requires 120,000 bytes before one can even offer a 'hello world.' WordPress is great if" +
+                " you want to staff people having limited skills while rapidly producing websites. There are wonderful sites you can use" +
+                " to create your own website. Do consider that Good programs don't take that much more time. </p><p class='opening'>" +
+                " <div class='grid - item '> <p> We have developed Websites written in HTML, CSS, Javascript with servers written in" +
+                " NodeJS. We create desktop applications in Electron (NodeJS Framework), C++ and C# through Visual Studio and" +
+                " QTCreator. </p> <p> We are currently hosting: </p> <p>" +
+                " <img src = '/assets/BromleySolutions.png' onClick='bromley()' alt = 'Bromley Solutions Las Vegas, Nevada' width = '120' height = '120'>" +
+                " <img src = '/assets/physics.png' onClick='physics()' alt = 'Interactive Physics Las Vegas,Nevada' width = '140' height = '120'>" +
+                " <img src = 'assets/logo.png' onClick='fishbowl()' alt='Fishbowl Tinting Wichita Kansas' width = '120' height = '120'> </p>" +
+                " Items currently used by Bromley Solutions: </p>" +
+                " <img src = '/assets/C++.png' alt = 'C++', Nevada'width = '120' height = '120'>" +
+                " <img src = '/assets/eprom.jpg' alt = 'Eprom burner, Nevada'width = '120' height = '120'>" +
+                " <img src = '/assets/QTCreator.png' alt ='QTCreator', Nevada'width = '120' height = '120'>" +
+                " <img src = '/assets/raspberryPi.png' alt = 'Eprom burner' width = '120' height = '120'>" +
+                " <img src = '/assets/electron.png' alt ='Electron' width = '190' height = '120'>" +
+                " <img src = '/assets/scope.png' alt = 'scope', Nevada'width = '190' height = '120'>" +
+                " <img src = '/assets/nodeJS.png' alt = 'NodeJS', Nevada'width = '120' height = '120'>" +
+                " <img src = '/assets/mariaDB.png' alt = 'mariaDB', Nevada'width = '120' height = '120'>" +
+                " <img src = '/assets/xml.png' alt = 'XML', Nevada'width = '120' height = '120'>" +
+                " <img src = '/assets/JSON.png' alt = 'JSON', Nevada'width = '120' height = '120'>"
+
             document.getElementById("hardware").innerHTML = "";
             document.getElementById("last").innerHTML = "";
             break;
@@ -93,7 +121,8 @@ function opening(state) {
                 " for method creation or command line routines which are preferred if new subassemblies are in use.</div>"
             break;
         case 4:
-            window.location.href = 'https://www.interactive-physics.org/';
+            alert("Did it");
+            window.location.href = 'http://interactive-physics.com/';
             break;
     }
 }
