@@ -1,10 +1,11 @@
 "use strict";
 
 // server.js
-//const bodyParser = require('body-parser')
 const host = '174.69.163.24'
 const express = require('express')
 
+const bodyParser = require('body-parser')
+var nodemailer = require('nodemailer')
 const https = require('https')
 const path = require('path')
 
@@ -24,15 +25,25 @@ https.createServer(options, app).listen(port, () =>
     console.log(`Success! Your application is running on port ${port}.`);
 })
 
+app.use(
+    bodyParser.urlencoded(
+    {
+        extended: true,
+    })
+)
+
 app.get('/', function(req, res)
 {
     res.sendFile(__dirname + '/client/index.html');
     console.log('done');
 });
 
+const noop = (error) => { console.log(error) };
+
 app.post('/newEmail', function(req, res)
 {
-    console.log('got here');
+    fs.appendFile('/home/dickbrmly/Documents/call.txt', JSON.stringify(req.body), noop)
+
 })
 app.get('/*.css', function(req, res)
 {

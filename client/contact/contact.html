@@ -44,11 +44,24 @@
 
                 <center><span><label><b>Interests</b></label></span>
                     <textarea rows="5" cols="89" name="text" placeholder="Enter text"></textarea>
-                    <br /><br /><button type="submit" style="width:97%; font-size: 2.2vw">Submit</button>
+                    <br /><br /><button onClick="closeWindow()" type="submit" style="width:97%; font-size: 2.2vw">Submit</button>
                 </center>
+
             </div>
         </form>
     </div>
 </body>
+
+<script>
+    function closeWindow()
+    {
+        var delayInMilliseconds = 1000 //1 second
+
+        setTimeout(function ()
+        {
+            window.close()            //your code to be executed after 1 second
+        }, delayInMilliseconds)
+    }
+</script>
 
 </html>
