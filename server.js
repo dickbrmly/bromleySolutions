@@ -38,7 +38,7 @@ app.get('/', function(req, res)
     console.log('done');
 });
 
-const noop = (error) => { console.log(error) };
+const noop = (error) => { console.log("If null, no error: " + error) };
 
 app.post('/newEmail', function(req, res)
 {
