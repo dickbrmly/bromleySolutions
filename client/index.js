@@ -51,7 +51,7 @@ function opening(state)
                 " <img src = '/assets/BromleySolutions.png' onClick='bromley()' alt = 'Bromley Solutions Las Vegas, Nevada' width = '120' height = '120'>" +
                 " <img src = '/assets/physics.png' onClick='physics()' alt = 'Interactive Physics Las Vegas,Nevada' width = '140' height = '120'>" +
                 " <img src = 'assets/logo.png' onClick='fishbowl()' alt='Fishbowl Tinting Wichita Kansas' width = '120' height = '120'>" +
-                " <img src = 'assets/Hexadecimal.png' onClick='fishbowl()' alt='Fishbowl Tinting Wichita Kansas' width = '80' height = '120'> </p> " +
+                " <img src = 'assets/Hexadecimal.png' alt='Hexadecimal Point Calculator' width = '80' height = '120'> </p> " +
                 " Items currently used by Bromley Solutions: </p>" +
                 " <img src = '/assets/C++.png' alt = 'C++', Nevada'width = '120' height = '120'>" +
                 " <img src = '/assets/eprom.jpg' alt = 'Eprom burner, Nevada'width = '120' height = '120'>" +
