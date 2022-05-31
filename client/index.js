@@ -69,7 +69,7 @@ function opening(state)
             break;
 
         case 1:
-            document.getElementById("first").innerHTML = "<p class='opening'>Emagine plugging in a component and it instantly integrates itself into " +
+            document.getElementById("first").innerHTML = "<p class='opening'>Imagine plugging in a component and it instantly integrates itself into " +
                 "your business option. Purchase cash register, plug it in, and it has your menu. It " +
                 "instantly passes orders to the kitchen.  The kitchen touch screen displays inwork orders, " +
                 "time of request, special orders. The server system can make changes to the menu, pricing, cost, " +
